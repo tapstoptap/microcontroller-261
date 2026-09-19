@@ -1,0 +1,8 @@
+# Local STM32CubeIDE workspace state and generated builds
+**/.metadata/
+**/Debug/
+**/Release/
+
+# Proteus automatic backups and per-user workspace state
+*.pdsbak
+*.pdsprj.*.workspace
