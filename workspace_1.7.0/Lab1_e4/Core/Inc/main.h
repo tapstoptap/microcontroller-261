@@ -58,18 +58,18 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define nsred_Pin GPIO_PIN_0
-#define nsred_GPIO_Port GPIOA
-#define nsyel_Pin GPIO_PIN_1
-#define nsyel_GPIO_Port GPIOA
-#define nsgre_Pin GPIO_PIN_2
-#define nsgre_GPIO_Port GPIOA
-#define wered_Pin GPIO_PIN_3
-#define wered_GPIO_Port GPIOA
-#define weyel_Pin GPIO_PIN_4
-#define weyel_GPIO_Port GPIOA
-#define wegre_Pin GPIO_PIN_5
-#define wegre_GPIO_Port GPIOA
+#define NS_RED_Pin GPIO_PIN_0
+#define NS_RED_GPIO_Port GPIOA
+#define NS_YELLOW_Pin GPIO_PIN_1
+#define NS_YELLOW_GPIO_Port GPIOA
+#define NS_GREEN_Pin GPIO_PIN_2
+#define NS_GREEN_GPIO_Port GPIOA
+#define WE_RED_Pin GPIO_PIN_3
+#define WE_RED_GPIO_Port GPIOA
+#define WE_YELLOW_Pin GPIO_PIN_4
+#define WE_YELLOW_GPIO_Port GPIOA
+#define WE_GREEN_Pin GPIO_PIN_5
+#define WE_GREEN_GPIO_Port GPIOA
 #define SEG_A_Pin GPIO_PIN_0
 #define SEG_A_GPIO_Port GPIOB
 #define SEG_B_Pin GPIO_PIN_1

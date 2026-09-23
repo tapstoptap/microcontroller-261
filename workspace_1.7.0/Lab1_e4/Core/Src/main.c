@@ -156,16 +156,13 @@ int main(void)
 
       counter++;
 
-      if (counter >= 10)
-      {
-          counter = 0;
-      }
+      if (counter >= 10) counter = 0;
   }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-  }
   /* USER CODE END 3 */
+}
 
 /**
   * @brief System Clock Configuration
@@ -216,17 +213,17 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, nsred_Pin|nsyel_Pin|nsgre_Pin|wered_Pin
-                          |weyel_Pin|wegre_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, NS_RED_Pin|NS_YELLOW_Pin|NS_GREEN_Pin|WE_RED_Pin
+                          |WE_YELLOW_Pin|WE_GREEN_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, SEG_A_Pin|SEG_B_Pin|SEG_C_Pin|SEG_D_Pin
-                          |SEG_E_Pin|SEG_F_Pin|SEG_G_Pin, GPIO_PIN_RESET);
+                          |SEG_E_Pin|SEG_F_Pin|SEG_G_Pin, GPIO_PIN_SET);
 
-  /*Configure GPIO pins : nsred_Pin nsyel_Pin nsgre_Pin wered_Pin
-                           weyel_Pin wegre_Pin */
-  GPIO_InitStruct.Pin = nsred_Pin|nsyel_Pin|nsgre_Pin|wered_Pin
-                          |weyel_Pin|wegre_Pin;
+  /*Configure GPIO pins : NS_RED_Pin NS_YELLOW_Pin NS_GREEN_Pin WE_RED_Pin
+                           WE_YELLOW_Pin WE_GREEN_Pin */
+  GPIO_InitStruct.Pin = NS_RED_Pin|NS_YELLOW_Pin|NS_GREEN_Pin|WE_RED_Pin
+                          |WE_YELLOW_Pin|WE_GREEN_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;

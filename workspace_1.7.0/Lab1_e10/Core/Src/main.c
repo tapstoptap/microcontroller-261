@@ -184,13 +184,9 @@ int main(void)
     /* Start with every LED turned off */
     clearAllClock();
 
-    /*
-     * Start the simulated clock at 12:00:00.
-     * At this time, D2 is the correct LED.
-     */
-    uint8_t hour = 12;
-    uint8_t minute = 0;
-    uint8_t second = 0;
+    uint8_t hour = 5;
+    uint8_t minute = 59;
+    uint8_t second = 50;
     uint32_t previous_tick = HAL_GetTick();
 
     displayClock(hour, minute, second);

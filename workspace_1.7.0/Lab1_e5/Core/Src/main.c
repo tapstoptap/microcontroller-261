@@ -159,8 +159,73 @@ int main(void)
   while (1)
   {
       /*
-       * North/South GREEN
-       * West/East RED
+       * Phase 1: NS_RED (3s) & WE_GREEN (3s)
+       * North/South: RED
+       * West/East: GREEN
+       */
+      HAL_GPIO_WritePin(NS_RED_GPIO_Port,
+                        NS_RED_Pin,
+                        GPIO_PIN_RESET);
+
+      HAL_GPIO_WritePin(NS_YELLOW_GPIO_Port,
+                        NS_YELLOW_Pin,
+                        GPIO_PIN_SET);
+
+      HAL_GPIO_WritePin(NS_GREEN_GPIO_Port,
+                        NS_GREEN_Pin,
+                        GPIO_PIN_SET);
+
+      HAL_GPIO_WritePin(WE_RED_GPIO_Port,
+                        WE_RED_Pin,
+                        GPIO_PIN_SET);
+
+      HAL_GPIO_WritePin(WE_YELLOW_GPIO_Port,
+                        WE_YELLOW_Pin,
+                        GPIO_PIN_SET);
+
+      HAL_GPIO_WritePin(WE_GREEN_GPIO_Port,
+                        WE_GREEN_Pin,
+                        GPIO_PIN_RESET);
+
+      runPhase(3);
+
+
+      /*
+       * Phase 2: NS_RED (continued for 2s, total 5s) & WE_YELLOW (2s)
+       * North/South: RED
+       * West/East: YELLOW
+       */
+      HAL_GPIO_WritePin(NS_RED_GPIO_Port,
+                        NS_RED_Pin,
+                        GPIO_PIN_RESET);
+
+      HAL_GPIO_WritePin(NS_YELLOW_GPIO_Port,
+                        NS_YELLOW_Pin,
+                        GPIO_PIN_SET);
+
+      HAL_GPIO_WritePin(NS_GREEN_GPIO_Port,
+                        NS_GREEN_Pin,
+                        GPIO_PIN_SET);
+
+      HAL_GPIO_WritePin(WE_RED_GPIO_Port,
+                        WE_RED_Pin,
+                        GPIO_PIN_SET);
+
+      HAL_GPIO_WritePin(WE_YELLOW_GPIO_Port,
+                        WE_YELLOW_Pin,
+                        GPIO_PIN_RESET);
+
+      HAL_GPIO_WritePin(WE_GREEN_GPIO_Port,
+                        WE_GREEN_Pin,
+                        GPIO_PIN_SET);
+
+      runPhase(2);
+
+
+      /*
+       * Phase 3: WE_RED (3s) & NS_GREEN (3s)
+       * North/South: GREEN
+       * West/East: RED
        */
       HAL_GPIO_WritePin(NS_RED_GPIO_Port,
                         NS_RED_Pin,
@@ -186,86 +251,43 @@ int main(void)
                         WE_GREEN_Pin,
                         GPIO_PIN_SET);
 
-      runPhase(5);
+      runPhase(3);
 
 
       /*
-       * North/South YELLOW
-       * West/East RED
+       * Phase 4: WE_RED (continued for 2s, total 5s) & NS_YELLOW (2s)
+       * North/South: YELLOW
+       * West/East: RED
        */
+      HAL_GPIO_WritePin(NS_RED_GPIO_Port,
+                        NS_RED_Pin,
+                        GPIO_PIN_SET);
+
+      HAL_GPIO_WritePin(NS_YELLOW_GPIO_Port,
+                        NS_YELLOW_Pin,
+                        GPIO_PIN_RESET);
+
       HAL_GPIO_WritePin(NS_GREEN_GPIO_Port,
                         NS_GREEN_Pin,
                         GPIO_PIN_SET);
 
-      HAL_GPIO_WritePin(NS_YELLOW_GPIO_Port,
-                        NS_YELLOW_Pin,
-                        GPIO_PIN_RESET);
-
-      runPhase(2);
-
-
-      /*
-       * ALL RED
-       */
-      HAL_GPIO_WritePin(NS_YELLOW_GPIO_Port,
-                        NS_YELLOW_Pin,
-                        GPIO_PIN_SET);
-
-      HAL_GPIO_WritePin(NS_RED_GPIO_Port,
-                        NS_RED_Pin,
-                        GPIO_PIN_RESET);
-
-      runPhase(1);
-
-
-      /*
-       * North/South RED
-       * West/East GREEN
-       */
-      HAL_GPIO_WritePin(WE_RED_GPIO_Port,
-                        WE_RED_Pin,
-                        GPIO_PIN_SET);
-
-      HAL_GPIO_WritePin(WE_GREEN_GPIO_Port,
-                        WE_GREEN_Pin,
-                        GPIO_PIN_RESET);
-
-      runPhase(5);
-
-
-      /*
-       * North/South RED
-       * West/East YELLOW
-       */
-      HAL_GPIO_WritePin(WE_GREEN_GPIO_Port,
-                        WE_GREEN_Pin,
-                        GPIO_PIN_SET);
-
-      HAL_GPIO_WritePin(WE_YELLOW_GPIO_Port,
-                        WE_YELLOW_Pin,
-                        GPIO_PIN_RESET);
-
-      runPhase(2);
-
-
-      /*
-       * ALL RED before repeating
-       */
-      HAL_GPIO_WritePin(WE_YELLOW_GPIO_Port,
-                        WE_YELLOW_Pin,
-                        GPIO_PIN_SET);
-
       HAL_GPIO_WritePin(WE_RED_GPIO_Port,
                         WE_RED_Pin,
                         GPIO_PIN_RESET);
 
-      runPhase(1);
+      HAL_GPIO_WritePin(WE_YELLOW_GPIO_Port,
+                        WE_YELLOW_Pin,
+                        GPIO_PIN_SET);
+
+      HAL_GPIO_WritePin(WE_GREEN_GPIO_Port,
+                        WE_GREEN_Pin,
+                        GPIO_PIN_SET);
+
+      runPhase(2);
   }
     /* USER CODE END WHILE */
 
-    /* USER CODE BEGIN 3 */
-  }
-  /* USER CODE END 3 */
+}
 
 /**
   * @brief System Clock Configuration
