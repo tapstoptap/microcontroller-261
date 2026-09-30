@@ -6,3 +6,23 @@
 # Proteus automatic backups and per-user workspace state
 *.pdsbak
 *.pdsprj.*.workspace
+
+# LaTeX build output and local visual-QA renders
+**/*.aux
+**/*.fdb_latexmk
+**/*.fls
+**/*.lof
+**/*.log
+**/*.lol
+**/*.lot
+**/*.out
+**/*.synctex.gz
+**/*.toc
+**/_*.data.minted
+**/_qa/
+**/page_previews/
+
+# Unused example material bundled with the report template
+reports/**/chapters/example/
+reports/**/code/example.py
+reports/**/refs/example.bib
