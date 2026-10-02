@@ -7,6 +7,9 @@
 *.pdsbak
 *.pdsprj.*.workspace
 
+# Lab 2 schematic previews are kept as PNG; retain BMP originals locally.
+/Proteus_Project/Lab2/*.bmp
+
 # LaTeX build output and local visual-QA renders
 **/*.aux
 **/*.fdb_latexmk

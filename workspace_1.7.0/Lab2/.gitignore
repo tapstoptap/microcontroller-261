@@ -1,0 +1,14 @@
+# Keep only the requested source/configuration snapshots for exercises 1-10.
+# Full local IDE projects, generated files, samples, and delivery copies remain on disk.
+/*
+!/.gitignore
+!/README.md
+!/Lab2_e[1-9]/
+!/Lab2_e10/
+/Lab2_e*/*
+!/Lab2_e*/Lab2_e*.ioc
+!/Lab2_e*/Core/
+/Lab2_e*/Core/*
+!/Lab2_e*/Core/Src/
+/Lab2_e*/Core/Src/*
+!/Lab2_e*/Core/Src/main.c
