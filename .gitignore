@@ -29,3 +29,6 @@
 reports/**/chapters/example/
 reports/**/code/example.py
 reports/**/refs/example.bib
+
+# Unpacked copies of Proteus projects (the .pdsprj is the source of truth)
+**/extracted/
