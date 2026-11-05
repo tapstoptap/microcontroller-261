@@ -32,3 +32,4 @@ Open or import the complete Lab 1 firmware projects in STM32CubeIDE. For Lab 2,
 follow its firmware README to regenerate a project from the `.ioc` file and
 restore the saved `Core/Src/main.c` before building. Generated project files and
 compiled firmware are intentionally not committed for Lab 2.
+
