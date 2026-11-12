@@ -35,3 +35,19 @@ reports/**/refs/example.bib
 
 # Lab reports are kept local only (not published)
 /reports/
+
+# STM32CubeIDE files regenerated from each .ioc - only the .ioc and
+# hand-written sources (main.c and custom modules) are committed
+/workspace_1.7.0/**/Drivers/
+/workspace_1.7.0/**/.settings/
+/workspace_1.7.0/**/.cproject
+/workspace_1.7.0/**/.mxproject
+/workspace_1.7.0/**/.project
+/workspace_1.7.0/**/*.ld
+/workspace_1.7.0/**/Core/Startup/
+/workspace_1.7.0/**/Core/Inc/main.h
+/workspace_1.7.0/**/Core/Inc/stm32f1xx_*.h
+/workspace_1.7.0/**/Core/Src/stm32f1xx_*.c
+/workspace_1.7.0/**/Core/Src/syscalls.c
+/workspace_1.7.0/**/Core/Src/sysmem.c
+/workspace_1.7.0/**/Core/Src/system_stm32f1xx.c

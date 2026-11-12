@@ -13,14 +13,15 @@ All projects target the **STM32F103C6Ux** and are built with STM32CubeIDE.
 
 | Lab | Topic | Firmware | Proteus |
 | --- | --- | --- | --- |
-| 1 | GPIO and LEDs (10 exercises) | [`Lab1_e1` … `Lab1_e10`](workspace_1.7.0/) – full projects | [`Lab1_eM`](Proteus_Project/) |
+| 1 | GPIO and LEDs (10 exercises) | [`Lab1_e1` … `Lab1_e10`](workspace_1.7.0/) – `.ioc` + `main.c` | [`Lab1_eM`](Proteus_Project/) |
 | 2 | Timer interrupts, 7-segment and LED matrix (10 exercises) | [`Lab2/`](workspace_1.7.0/Lab2/) – `.ioc` + `main.c` snapshots | [`Lab2/`](Proteus_Project/Lab2/) |
 | 3 | Buttons and switches – traffic light with mode buttons | [`Lab3/Lab3_exercises`](workspace_1.7.0/Lab3/Lab3_exercises/) – `.ioc` + application `Core` sources | [`Lab3/`](Proteus_Project/Lab3/) |
-| 4 | Cooperative scheduler | [`Lab4/Lab4_exercises`](workspace_1.7.0/Lab4/Lab4_exercises/) – full project | [`Lab4/`](Proteus_Project/Lab4/) ([preview](Proteus_Project/Lab4/lab4.png)) |
+| 4 | Cooperative scheduler | [`Lab4/Lab4_exercises`](workspace_1.7.0/Lab4/Lab4_exercises/) – `.ioc` + scheduler and `main.c` | [`Lab4/`](Proteus_Project/Lab4/) ([preview](Proteus_Project/Lab4/lab4.png)) |
 | 5 | UART | – | – |
 
-Lab 1 remains in its original tool-oriented paths so existing STM32CubeIDE
-imports and Proteus projects continue to work.
+Only the CubeMX configuration (`.ioc`) and hand-written sources are committed.
+Drivers, startup code, linker scripts, IDE project files, and other files that
+STM32CubeIDE regenerates from the `.ioc` are intentionally left out.
 
 Lab 4 implements a cooperative scheduler
 ([`scheduler.h`](workspace_1.7.0/Lab4/Lab4_exercises/Core/Inc/scheduler.h) /
@@ -43,10 +44,11 @@ control. Lab reports are kept locally and are not published.
 
 ## Building
 
-- **Lab 1 and Lab 4:** import the project folder into STM32CubeIDE and build.
-- **Lab 2 and Lab 3:** these are source snapshots. Open the `.ioc` file, generate
-  the project, then restore the committed `Core` sources before building (see the
-  [Lab 2 firmware README](workspace_1.7.0/Lab2/README.md)).
-
-Compiled `.hex`/`.elf` files are not committed. Build the firmware first, then
-select it as the STM32 **Program File** in the matching Proteus project.
+1. Open the exercise's `.ioc` in STM32CubeIDE and generate code. Install the
+   STM32F1 firmware package if prompted. This recreates the drivers, startup
+   code, linker script, and project files.
+2. Replace the generated `Core/Src/main.c` with the committed version and copy
+   in any other committed sources (for example Lab 4's `scheduler.c`/`.h`). See the
+   [Lab 2 firmware README](workspace_1.7.0/Lab2/README.md) for details.
+3. Build, then select the `.hex`/`.elf` as the STM32 **Program File** in the
+   matching Proteus project. Compiled binaries are not committed.
