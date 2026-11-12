@@ -32,3 +32,6 @@ reports/**/refs/example.bib
 
 # Unpacked copies of Proteus projects (the .pdsprj is the source of truth)
 **/extracted/
+
+# Lab reports are kept local only (not published)
+/reports/

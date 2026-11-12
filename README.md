@@ -1,6 +1,6 @@
 # CO3010 Microcontrollers Laboratory
 
-This repository contains firmware, Proteus simulations, and reports produced for
+This repository contains firmware and Proteus simulations produced for
 the CO3010 Microcontrollers laboratory course in Semester 261.
 All projects target the **STM32F103C6Ux** and are built with STM32CubeIDE.
 
@@ -8,20 +8,19 @@ All projects target the **STM32F103C6Ux** and are built with STM32CubeIDE.
 
 - [`workspace_1.7.0/`](workspace_1.7.0/): STM32CubeIDE projects and source code.
 - [`Proteus_Project/`](Proteus_Project/): Proteus projects and schematic images.
-- [`reports/`](reports/): LaTeX report sources and final PDFs.
 
 ## Lab status
 
-| Lab | Topic | Firmware | Proteus | Report |
-| --- | --- | --- | --- | --- |
-| 1 | GPIO and LEDs (10 exercises) | [`Lab1_e1` … `Lab1_e10`](workspace_1.7.0/) – full projects | [`Lab1_eM`](Proteus_Project/) | [`Lab_01`](reports/Lab_01/) |
-| 2 | Timer interrupts, 7-segment and LED matrix (10 exercises) | [`Lab2/`](workspace_1.7.0/Lab2/) – `.ioc` + `main.c` snapshots | [`Lab2/`](Proteus_Project/Lab2/) | Not published yet |
-| 3 | Buttons and switches – traffic light with mode buttons | [`Lab3/Lab3_exercises`](workspace_1.7.0/Lab3/Lab3_exercises/) – `.ioc` + application `Core` sources | [`Lab3/`](Proteus_Project/Lab3/) | Not published yet |
-| 4 | Cooperative scheduler | [`Lab4/Lab4_exercises`](workspace_1.7.0/Lab4/Lab4_exercises/) – full project | [`Lab4/`](Proteus_Project/Lab4/) ([preview](Proteus_Project/Lab4/lab4.png)) | Not published yet |
-| 5 | UART | – | – | – |
+| Lab | Topic | Firmware | Proteus |
+| --- | --- | --- | --- |
+| 1 | GPIO and LEDs (10 exercises) | [`Lab1_e1` … `Lab1_e10`](workspace_1.7.0/) – full projects | [`Lab1_eM`](Proteus_Project/) |
+| 2 | Timer interrupts, 7-segment and LED matrix (10 exercises) | [`Lab2/`](workspace_1.7.0/Lab2/) – `.ioc` + `main.c` snapshots | [`Lab2/`](Proteus_Project/Lab2/) |
+| 3 | Buttons and switches – traffic light with mode buttons | [`Lab3/Lab3_exercises`](workspace_1.7.0/Lab3/Lab3_exercises/) – `.ioc` + application `Core` sources | [`Lab3/`](Proteus_Project/Lab3/) |
+| 4 | Cooperative scheduler | [`Lab4/Lab4_exercises`](workspace_1.7.0/Lab4/Lab4_exercises/) – full project | [`Lab4/`](Proteus_Project/Lab4/) ([preview](Proteus_Project/Lab4/lab4.png)) |
+| 5 | UART | – | – |
 
 Lab 1 remains in its original tool-oriented paths so existing STM32CubeIDE
-imports, Proteus projects, and LaTeX image links continue to work.
+imports and Proteus projects continue to work.
 
 Lab 4 implements a cooperative scheduler
 ([`scheduler.h`](workspace_1.7.0/Lab4/Lab4_exercises/Core/Inc/scheduler.h) /
@@ -37,11 +36,10 @@ task deletion and error reporting.
 - Lab 2 firmware snapshot: `workspace_1.7.0/Lab2/Lab2_eM`
 - Lab 2 shared Proteus projects: `Proteus_Project/Lab2/`
 - Lab 3 onwards: `workspace_1.7.0/LabN/LabN_exercises` and `Proteus_Project/LabN/`
-- Report: `reports/Lab_NN`
 
 Here, `N` is the lab number and `M` is the exercise number. Keep compiled
-`Debug`/`Release` output, IDE `.metadata`, LaTeX auxiliary files, and Proteus
-backups out of version control.
+`Debug`/`Release` output, IDE `.metadata`, and Proteus backups out of version
+control. Lab reports are kept locally and are not published.
 
 ## Building
 
